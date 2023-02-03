@@ -18,5 +18,6 @@ char* getPalavra(palavra* pal);
 static int Retorna_Idx_Palavra_Vetor(char palavraUnica[], palavra** vetorDePalavras, int qtd);
 static int Verifica_Palavra_Ja_Existe_Noticia(char palavraUnica[], palavra** vetorDePalavras, int qtd);
 int Le_Noticia_Unica(palavra** vetorDePalavras, FILE* arq, int tam);
+float tf_idf(float frequencia_palavra,int qtd_documentos, int num_doc_que_palavra_aparece);
 
 #endif
