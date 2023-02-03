@@ -184,3 +184,13 @@ int Le_Noticia_Unica(palavra** vetorDePalavras, FILE* arq, int tam) {
   }
   return tam;
 }
+float tf_idf(float frequencia_palavra,int qtd_documentos, int num_doc_que_palavra_aparece){
+  float TF_IDF=0, IDF=0, aux=0;
+  aux=(1+qtd_documentos)/(1+num_doc_que_palavra_aparece);
+  IDF=log(aux)+1;
+  // frequencia palavra é em relação a palavra ao documento
+  TF_IDF=frequencia_palavra*IDF;
+
+  return TF_IDF;
+
+}
